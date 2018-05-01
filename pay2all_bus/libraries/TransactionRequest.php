@@ -45,7 +45,7 @@ class TransactionRequest
 	
 	private $ccType = "CCFundTransfer";
 
-	private $reqHashKey = "dffb98122da3cc8670";
+	private $reqHashKey = "d8122da3cc8670";
 
 
     /**
