@@ -4,31 +4,13 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class GetStation extends CI_Controller {
 
-    public function pat($value='')
-    {
-       for ($i=0; $i <=9; $i++) 
-       { 
-            for ($j=0; $j <=4 ; $j++) 
-            { 
-               // echo $i."=".$j."&nbsp";
-                if ($j==2) {
-
-                }else
-                {
-                    echo $i."=".$j;
-                }
-             }
-            echo "<br>";
-        }
-    }
-
-        
+          
                 
         public function index() 
         {
                 $parameters = array();
         
-                $key = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijk2MjNmNWE5NjFmMmU4NjkwZGMxNTkxOGYyMjAzYmQ1MWRhM2JkYWRjN2M5ZGZlNjRjOWZjZWFjOWJhZTNiMmE1YzJkZmE3MTU0OGFkMjkxIn0.eyJhdWQiOiI1IiwianRpIjoiOTYyM2Y1YTk2MWYyZTg2OTBkYzE1OTE4ZjIyMDNiZDUxZGEzYmRhZGM3YzlkZmU2NGM5ZmNlYWM5YmFlM2IyYTVjMmRmYTcxNTQ4YWQyOTEiLCJpYXQiOjE1MjQwNDIzNzIsIm5iZiI6MTUyNDA0MjM3MiwiZXhwIjoxNTU1NTc4MzcyLCJzdWIiOiIxMDk0MSIsInNjb3BlcyI6W119.o8xJf63V14E9ZJa9U949-uDNigzRk36Hwjd0urVug2YAF_gdZsdWbbVHpxoUCfU4TWZtatvh8gatx6a2hnO9UbzslVpfOO6AiI9wj6YjDQOLw40Q6WB_dnnWTv1Cnc4vNkLwGY33xoMcCJ6-vOH7lUdsKrg-8dDyX-siscZ_Rb63ldw6t7a0USACG-IixfNM7m4--bGyhhv8SKfHVHCJrmCMv1H_fA1sT7USgTI66xCzR6go7wknQT6K6yd3VKdcAzizsfsCLrxgADQTamPhdAg53AqhAgcoP2FAncKC5jIdWEKYF7_d4vtMPKXALxAM2Ao5VTBX8ygbwhSQ4ztgDmv3ve4GrK-gVRkKmUd3zL1Pi__W-WR8kvGtp-PpvUWZEkhDGGxuj7-dmJKf6W5NIHS1P_kvHHV3UVW2aiIAvC12yvXMGNQng_LFffh-HW4Et5pQJOjM0zeHgo89htTTmRscohWZyzU1ywHLnJGbbtiRHhgsbd0tbjCODVH8jZPGCJMJ8-h7Vga-NOd1VI_f5GGz98QSGp92i6j9pBicIDojVfWRmbg9p38FRJHFHkvel2sEMcFwVEe_6cqDMgOnpGpam1_hLrLLbUkjkooHpy695v2D6H0GxO9WipDgeGXxxDGfVWFkiHXC57x3-ghn8gMUpRJqbX8A4g9ru8QcLRU"; //you have to add personal access token 
+                $key = "eyJ0eXAiOiJKV1QiLI1NiIsImhdfhrfhdfhhfhhgfdfgp0aSI6Ijk2MjNmNWE5NjFmMmU4NjkwZGMxNTkxOGYyMjAzYmQ1MWRhM2JkYWRjN2M5ZGZlNjRjOWZjZWFjOWJhZTNiMmE1YzJkZmE3MTU0OGFkMjkxIn0.eyJhdWQiOiI1IiwianRpIjoiOTYyM2Y1YTk2MWYyZTg2OTBkYzE1OTE4ZjIyMDNiZDUxZGEzYmRhZGM3YzlkZmU2NGM5ZmNlYWM5YmFlM2IyYTVjMmRmYTcxNTQ4YWQyOTEiLCJpYXQiOjE1MjQwNDIzNzIsIm5iZiI6MTUyNDA0MjM3MiwiZXhwIjoxNTU1NTc4MzcyLCJzdWIiOiIxMDk0MSIsInNjb3BlcyI6W119.o8xJf63V14E9ZJa9U949-uDNigzRk36Hwjd0urVug2YAF_gdZsdWbbVHpxoUCfU4TWZtatvh8gatx6a2hnO9UbzslVpfOO6AiI9wj6YjDQOLw40Q6WB_dnnWTv1Cnc4vNkLwGY33xoMcCJ6-vOH7lUdsKrg-8dDyX-siscZ_Rb63ldw6t7a0USACG-IixfNM7m4--bGyhhv8SKfHVHCJrmCMv1H_fA1sT7USgTI66xCzR6go7wknQT6K6yd3VKdcAzizsfsCLrxgADQTamPhdAg53AqhAgcoP2FAncKC5jIdWEKYF7_d4vtMPKXALxAM2Ao5VTBX8ygbwhSQ4ztgDmv3ve4GrK-gVRkKmUd3zL1Pi__W-WR8kvGtp-PpvUWZEkhDGGxuj7-dmJKf6W5NIHS1P_kvHHV3UVW2aiIAvC12yvXMGNQng_LFffh-HW4Et5pQJOjM0zeHgo89htTTmRscohWZyzU1ywHLnJGbbtiRHhgsbd0tbjCODVH8jZPGCJMJ8-h7Vga-NOd1VI_f5GGz98QSGp92i6j9pBicIDojVfWRmbg9p38FRJHFHkvel2sEMcFwVEe_6cqDMgOnpGpam1_hLrLLbUkjkooHpy695v2D6H0GxO9WipDgeGXxxDGfVWFkiHXC57x3-ghn8gMUpRJqbX8A4g9ru8QcLRU"; //you have to add personal access token 
         
                 $header = ["Accept:application/json", "Authorization:Bearer ".$key];
         
@@ -122,7 +104,7 @@ class GetStation extends CI_Controller {
                     'doj'=>$_SESSION['doj']
                 );
         
-                $key = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijk2MjNmNWE5NjFmMmU4NjkwZGMxNTkxOGYyMjAzYmQ1MWRhM2JkYWRjN2M5ZGZlNjRjOWZjZWFjOWJhZTNiMmE1YzJkZmE3MTU0OGFkMjkxIn0.eyJhdWQiOiI1IiwianRpIjoiOTYyM2Y1YTk2MWYyZTg2OTBkYzE1OTE4ZjIyMDNiZDUxZGEzYmRhZGM3YzlkZmU2NGM5ZmNlYWM5YmFlM2IyYTVjMmRmYTcxNTQ4YWQyOTEiLCJpYXQiOjE1MjQwNDIzNzIsIm5iZiI6MTUyNDA0MjM3MiwiZXhwIjoxNTU1NTc4MzcyLCJzdWIiOiIxMDk0MSIsInNjb3BlcyI6W119.o8xJf63V14E9ZJa9U949-uDNigzRk36Hwjd0urVug2YAF_gdZsdWbbVHpxoUCfU4TWZtatvh8gatx6a2hnO9UbzslVpfOO6AiI9wj6YjDQOLw40Q6WB_dnnWTv1Cnc4vNkLwGY33xoMcCJ6-vOH7lUdsKrg-8dDyX-siscZ_Rb63ldw6t7a0USACG-IixfNM7m4--bGyhhv8SKfHVHCJrmCMv1H_fA1sT7USgTI66xCzR6go7wknQT6K6yd3VKdcAzizsfsCLrxgADQTamPhdAg53AqhAgcoP2FAncKC5jIdWEKYF7_d4vtMPKXALxAM2Ao5VTBX8ygbwhSQ4ztgDmv3ve4GrK-gVRkKmUd3zL1Pi__W-WR8kvGtp-PpvUWZEkhDGGxuj7-dmJKf6W5NIHS1P_kvHHV3UVW2aiIAvC12yvXMGNQng_LFffh-HW4Et5pQJOjM0zeHgo89htTTmRscohWZyzU1ywHLnJGbbtiRHhgsbd0tbjCODVH8jZPGCJMJ8-h7Vga-NOd1VI_f5GGz98QSGp92i6j9pBicIDojVfWRmbg9p38FRJHFHkvel2sEMcFwVEe_6cqDMgOnpGpam1_hLrLLbUkjkooHpy695v2D6H0GxO9WipDgeGXxxDGfVWFkiHXC57x3-ghn8gMUpRJqbX8A4g9ru8QcLRU"; //you have to add personal access token 
+                $key = "eyJ0eXAiOiJKV1SUzI1NiIfgngfngnghgnhnsImp0aSI6Ijk2MjNmNWE5NjFmMmU4NjkwZGMxNTkxOGYyMjAzYmQ1MWRhM2JkYWRjN2M5ZGZlNjRjOWZjZWFjOWJhZTNiMmE1YzJkZmE3MTU0OGFkMjkxIn0.eyJhdWQiOiI1IiwianRpIjoiOTYyM2Y1YTk2MWYyZTg2OTBkYzE1OTE4ZjIyMDNiZDUxZGEzYmRhZGM3YzlkZmU2NGM5ZmNlYWM5YmFlM2IyYTVjMmRmYTcxNTQ4YWQyOTEiLCJpYXQiOjE1MjQwNDIzNzIsIm5iZiI6MTUyNDA0MjM3MiwiZXhwIjoxNTU1NTc4MzcyLCJzdWIiOiIxMDk0MSIsInNjb3BlcyI6W119.o8xJf63V14E9ZJa9U949-uDNigzRk36Hwjd0urVug2YAF_gdZsdWbbVHpxoUCfU4TWZtatvh8gatx6a2hnO9UbzslVpfOO6AiI9wj6YjDQOLw40Q6WB_dnnWTv1Cnc4vNkLwGY33xoMcCJ6-vOH7lUdsKrg-8dDyX-siscZ_Rb63ldw6t7a0USACG-IixfNM7m4--bGyhhv8SKfHVHCJrmCMv1H_fA1sT7USgTI66xCzR6go7wknQT6K6yd3VKdcAzizsfsCLrxgADQTamPhdAg53AqhAgcoP2FAncKC5jIdWEKYF7_d4vtMPKXALxAM2Ao5VTBX8ygbwhSQ4ztgDmv3ve4GrK-gVRkKmUd3zL1Pi__W-WR8kvGtp-PpvUWZEkhDGGxuj7-dmJKf6W5NIHS1P_kvHHV3UVW2aiIAvC12yvXMGNQng_LFffh-HW4Et5pQJOjM0zeHgo89htTTmRscohWZyzU1ywHLnJGbbtiRHhgsbd0tbjCODVH8jZPGCJMJ8-h7Vga-NOd1VI_f5GGz98QSGp92i6j9pBicIDojVfWRmbg9p38FRJHFHkvel2sEMcFwVEe_6cqDMgOnpGpam1_hLrLLbUkjkooHpy695v2D6H0GxO9WipDgeGXxxDGfVWFkiHXC57x3-ghn8gMUpRJqbX8A4g9ru8QcLRU"; //you have to add personal access token 
         
                 $header = ["Accept:application/json", "Authorization:Bearer ".$key];
         
@@ -192,7 +174,7 @@ class GetStation extends CI_Controller {
                         'routeScheduleId'=>$_SESSION['routeScheduleId']
                 );
         
-                $key = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijk2MjNmNWE5NjFmMmU4NjkwZGMxNTkxOGYyMjAzYmQ1MWRhM2JkYWRjN2M5ZGZlNjRjOWZjZWFjOWJhZTNiMmE1YzJkZmE3MTU0OGFkMjkxIn0.eyJhdWQiOiI1IiwianRpIjoiOTYyM2Y1YTk2MWYyZTg2OTBkYzE1OTE4ZjIyMDNiZDUxZGEzYmRhZGM3YzlkZmU2NGM5ZmNlYWM5YmFlM2IyYTVjMmRmYTcxNTQ4YWQyOTEiLCJpYXQiOjE1MjQwNDIzNzIsIm5iZiI6MTUyNDA0MjM3MiwiZXhwIjoxNTU1NTc4MzcyLCJzdWIiOiIxMDk0MSIsInNjb3BlcyI6W119.o8xJf63V14E9ZJa9U949-uDNigzRk36Hwjd0urVug2YAF_gdZsdWbbVHpxoUCfU4TWZtatvh8gatx6a2hnO9UbzslVpfOO6AiI9wj6YjDQOLw40Q6WB_dnnWTv1Cnc4vNkLwGY33xoMcCJ6-vOH7lUdsKrg-8dDyX-siscZ_Rb63ldw6t7a0USACG-IixfNM7m4--bGyhhv8SKfHVHCJrmCMv1H_fA1sT7USgTI66xCzR6go7wknQT6K6yd3VKdcAzizsfsCLrxgADQTamPhdAg53AqhAgcoP2FAncKC5jIdWEKYF7_d4vtMPKXALxAM2Ao5VTBX8ygbwhSQ4ztgDmv3ve4GrK-gVRkKmUd3zL1Pi__W-WR8kvGtp-PpvUWZEkhDGGxuj7-dmJKf6W5NIHS1P_kvHHV3UVW2aiIAvC12yvXMGNQng_LFffh-HW4Et5pQJOjM0zeHgo89htTTmRscohWZyzU1ywHLnJGbbtiRHhgsbd0tbjCODVH8jZPGCJMJ8-h7Vga-NOd1VI_f5GGz98QSGp92i6j9pBicIDojVfWRmbg9p38FRJHFHkvel2sEMcFwVEe_6cqDMgOnpGpam1_hLrLLbUkjkooHpy695v2D6H0GxO9WipDgeGXxxDGfVWFkiHXC57x3-ghn8gMUpRJqbX8A4g9ru8QcLRU"; //you have to add personal access token 
+                $key = "eyJ0eXAiOiJKV1QiLCJhIghghnmghmmhmhg1NiIsImp0aSI6Ijk2MjNmNWE5NjFmMmU4NjkwZGMxNTkxOGYyMjAzYmQ1MWRhM2JkYWRjN2M5ZGZlNjRjOWZjZWFjOWJhZTNiMmE1YzJkZmE3MTU0OGFkMjkxIn0.eyJhdWQiOiI1IiwianRpIjoiOTYyM2Y1YTk2MWYyZTg2OTBkYzE1OTE4ZjIyMDNiZDUxZGEzYmRhZGM3YzlkZmU2NGM5ZmNlYWM5YmFlM2IyYTVjMmRmYTcxNTQ4YWQyOTEiLCJpYXQiOjE1MjQwNDIzNzIsIm5iZiI6MTUyNDA0MjM3MiwiZXhwIjoxNTU1NTc4MzcyLCJzdWIiOiIxMDk0MSIsInNjb3BlcyI6W119.o8xJf63V14E9ZJa9U949-uDNigzRk36Hwjd0urVug2YAF_gdZsdWbbVHpxoUCfU4TWZtatvh8gatx6a2hnO9UbzslVpfOO6AiI9wj6YjDQOLw40Q6WB_dnnWTv1Cnc4vNkLwGY33xoMcCJ6-vOH7lUdsKrg-8dDyX-siscZ_Rb63ldw6t7a0USACG-IixfNM7m4--bGyhhv8SKfHVHCJrmCMv1H_fA1sT7USgTI66xCzR6go7wknQT6K6yd3VKdcAzizsfsCLrxgADQTamPhdAg53AqhAgcoP2FAncKC5jIdWEKYF7_d4vtMPKXALxAM2Ao5VTBX8ygbwhSQ4ztgDmv3ve4GrK-gVRkKmUd3zL1Pi__W-WR8kvGtp-PpvUWZEkhDGGxuj7-dmJKf6W5NIHS1P_kvHHV3UVW2aiIAvC12yvXMGNQng_LFffh-HW4Et5pQJOjM0zeHgo89htTTmRscohWZyzU1ywHLnJGbbtiRHhgsbd0tbjCODVH8jZPGCJMJ8-h7Vga-NOd1VI_f5GGz98QSGp92i6j9pBicIDojVfWRmbg9p38FRJHFHkvel2sEMcFwVEe_6cqDMgOnpGpam1_hLrLLbUkjkooHpy695v2D6H0GxO9WipDgeGXxxDGfVWFkiHXC57x3-ghn8gMUpRJqbX8A4g9ru8QcLRU"; //you have to add personal access token 
         
                 $header = ["Accept:application/json", "Authorization:Bearer ".$key];
         
@@ -301,7 +283,7 @@ class GetStation extends CI_Controller {
          // print_r($json);die;
 
 
-        	$key =  "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijk2MjNmNWE5NjFmMmU4NjkwZGMxNTkxOGYyMjAzYmQ1MWRhM2JkYWRjN2M5ZGZlNjRjOWZjZWFjOWJhZTNiMmE1YzJkZmE3MTU0OGFkMjkxIn0.eyJhdWQiOiI1IiwianRpIjoiOTYyM2Y1YTk2MWYyZTg2OTBkYzE1OTE4ZjIyMDNiZDUxZGEzYmRhZGM3YzlkZmU2NGM5ZmNlYWM5YmFlM2IyYTVjMmRmYTcxNTQ4YWQyOTEiLCJpYXQiOjE1MjQwNDIzNzIsIm5iZiI6MTUyNDA0MjM3MiwiZXhwIjoxNTU1NTc4MzcyLCJzdWIiOiIxMDk0MSIsInNjb3BlcyI6W119.o8xJf63V14E9ZJa9U949-uDNigzRk36Hwjd0urVug2YAF_gdZsdWbbVHpxoUCfU4TWZtatvh8gatx6a2hnO9UbzslVpfOO6AiI9wj6YjDQOLw40Q6WB_dnnWTv1Cnc4vNkLwGY33xoMcCJ6-vOH7lUdsKrg-8dDyX-siscZ_Rb63ldw6t7a0USACG-IixfNM7m4--bGyhhv8SKfHVHCJrmCMv1H_fA1sT7USgTI66xCzR6go7wknQT6K6yd3VKdcAzizsfsCLrxgADQTamPhdAg53AqhAgcoP2FAncKC5jIdWEKYF7_d4vtMPKXALxAM2Ao5VTBX8ygbwhSQ4ztgDmv3ve4GrK-gVRkKmUd3zL1Pi__W-WR8kvGtp-PpvUWZEkhDGGxuj7-dmJKf6W5NIHS1P_kvHHV3UVW2aiIAvC12yvXMGNQng_LFffh-HW4Et5pQJOjM0zeHgo89htTTmRscohWZyzU1ywHLnJGbbtiRHhgsbd0tbjCODVH8jZPGCJMJ8-h7Vga-NOd1VI_f5GGz98QSGp92i6j9pBicIDojVfWRmbg9p38FRJHFHkvel2sEMcFwVEe_6cqDMgOnpGpam1_hLrLLbUkjkooHpy695v2D6H0GxO9WipDgeGXxxDGfVWFkiHXC57x3-ghn8gMUpRJqbX8A4g9ru8QcLRU";
+        	$key =  "eyJ0eXAiOiJKV1QiLCJhbGciOimp0ghmghmghmmghmaSI6Ijk2MjNmNWE5NjFmMmU4NjkwZGMxNTkxOGYyMjAzYmQ1MWRhM2JkYWRjN2M5ZGZlNjRjOWZjZWFjOWJhZTNiMmE1YzJkZmE3MTU0OGFkMjkxIn0.eyJhdWQiOiI1IiwianRpIjoiOTYyM2Y1YTk2MWYyZTg2OTBkYzE1OTE4ZjIyMDNiZDUxZGEzYmRhZGM3YzlkZmU2NGM5ZmNlYWM5YmFlM2IyYTVjMmRmYTcxNTQ4YWQyOTEiLCJpYXQiOjE1MjQwNDIzNzIsIm5iZiI6MTUyNDA0MjM3MiwiZXhwIjoxNTU1NTc4MzcyLCJzdWIiOiIxMDk0MSIsInNjb3BlcyI6W119.o8xJf63V14E9ZJa9U949-uDNigzRk36Hwjd0urVug2YAF_gdZsdWbbVHpxoUCfU4TWZtatvh8gatx6a2hnO9UbzslVpfOO6AiI9wj6YjDQOLw40Q6WB_dnnWTv1Cnc4vNkLwGY33xoMcCJ6-vOH7lUdsKrg-8dDyX-siscZ_Rb63ldw6t7a0USACG-IixfNM7m4--bGyhhv8SKfHVHCJrmCMv1H_fA1sT7USgTI66xCzR6go7wknQT6K6yd3VKdcAzizsfsCLrxgADQTamPhdAg53AqhAgcoP2FAncKC5jIdWEKYF7_d4vtMPKXALxAM2Ao5VTBX8ygbwhSQ4ztgDmv3ve4GrK-gVRkKmUd3zL1Pi__W-WR8kvGtp-PpvUWZEkhDGGxuj7-dmJKf6W5NIHS1P_kvHHV3UVW2aiIAvC12yvXMGNQng_LFffh-HW4Et5pQJOjM0zeHgo89htTTmRscohWZyzU1ywHLnJGbbtiRHhgsbd0tbjCODVH8jZPGCJMJ8-h7Vga-NOd1VI_f5GGz98QSGp92i6j9pBicIDojVfWRmbg9p38FRJHFHkvel2sEMcFwVEe_6cqDMgOnpGpam1_hLrLLbUkjkooHpy695v2D6H0GxO9WipDgeGXxxDGfVWFkiHXC57x3-ghn8gMUpRJqbX8A4g9ru8QcLRU";
         	$ch = curl_init();
         	$url = "https://www.pay2all.in/api/bus/v1/blockTicket";
 
@@ -348,8 +330,8 @@ class GetStation extends CI_Controller {
 
 				//Setting all values here
 				$transactionRequest->setMode("Production");
-				$transactionRequest->setLogin(57938);
-				$transactionRequest->setPassword("GMNP@123");
+				$transactionRequest->setLogin(12345);
+				$transactionRequest->setPassword("TEST#123");
 				$transactionRequest->setProductId("GMNP_RECHARGE");
 				$transactionRequest->setAmount($amount);
 				$transactionRequest->setTransactionCurrency("INR");
@@ -363,7 +345,7 @@ class GetStation extends CI_Controller {
 				//$transactionRequest->setCustomerMobile($number);
 				$transactionRequest->setCustomerBillingAddress($CustomerAddress);
 				$transactionRequest->setCustomerAccount("639827");
-				$transactionRequest->setReqHashKey("dffb98122da3cc8670");
+				$transactionRequest->setReqHashKey("dffb98122dahrhgrt8670");
 
 
 				$url = $transactionRequest->getPGUrl();
@@ -379,7 +361,7 @@ class GetStation extends CI_Controller {
         $this->load->library('TransactionResponse');      
         $transactionResponse = new TransactionResponse();
         //print_r($transactionResponse);die;
-        $transactionResponse->setRespHashKey("0203c4c086322903be");
+        $transactionResponse->setRespHashKey("0203c4c0gfhghmgmh86323be");
         	 //echo "<pre>";
             	// print_r($_POST);die;
 
@@ -434,7 +416,7 @@ class GetStation extends CI_Controller {
         		'blockTicketKey' => $_SESSION['blockTicketKey'] 
         	); 
 
-        	$key =  "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijk2MjNmNWE5NjFmMmU4NjkwZGMxNTkxOGYyMjAzYmQ1MWRhM2JkYWRjN2M5ZGZlNjRjOWZjZWFjOWJhZTNiMmE1YzJkZmE3MTU0OGFkMjkxIn0.eyJhdWQiOiI1IiwianRpIjoiOTYyM2Y1YTk2MWYyZTg2OTBkYzE1OTE4ZjIyMDNiZDUxZGEzYmRhZGM3YzlkZmU2NGM5ZmNlYWM5YmFlM2IyYTVjMmRmYTcxNTQ4YWQyOTEiLCJpYXQiOjE1MjQwNDIzNzIsIm5iZiI6MTUyNDA0MjM3MiwiZXhwIjoxNTU1NTc4MzcyLCJzdWIiOiIxMDk0MSIsInNjb3BlcyI6W119.o8xJf63V14E9ZJa9U949-uDNigzRk36Hwjd0urVug2YAF_gdZsdWbbVHpxoUCfU4TWZtatvh8gatx6a2hnO9UbzslVpfOO6AiI9wj6YjDQOLw40Q6WB_dnnWTv1Cnc4vNkLwGY33xoMcCJ6-vOH7lUdsKrg-8dDyX-siscZ_Rb63ldw6t7a0USACG-IixfNM7m4--bGyhhv8SKfHVHCJrmCMv1H_fA1sT7USgTI66xCzR6go7wknQT6K6yd3VKdcAzizsfsCLrxgADQTamPhdAg53AqhAgcoP2FAncKC5jIdWEKYF7_d4vtMPKXALxAM2Ao5VTBX8ygbwhSQ4ztgDmv3ve4GrK-gVRkKmUd3zL1Pi__W-WR8kvGtp-PpvUWZEkhDGGxuj7-dmJKf6W5NIHS1P_kvHHV3UVW2aiIAvC12yvXMGNQng_LFffh-HW4Et5pQJOjM0zeHgo89htTTmRscohWZyzU1ywHLnJGbbtiRHhgsbd0tbjCODVH8jZPGCJMJ8-h7Vga-NOd1VI_f5GGz98QSGp92i6j9pBicIDojVfWRmbg9p38FRJHFHkvel2sEMcFwVEe_6cqDMgOnpGpam1_hLrLLbUkjkooHpy695v2D6H0GxO9WipDgeGXxxDGfVWFkiHXC57x3-ghn8gMUpRJqbX8A4g9ru8QcLRU";
+        	$key =  "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzIghmghmghmgmgmhgderterte1NiI6Ijk2MjNmNWE5NjFmMmU4NjkwZGMxNTkxOGYyMjAzYmQ1MWRhM2JkYWRjN2M5ZGZlNjRjOWZjZWFjOWJhZTNiMmE1YzJkZmE3MTU0OGFkMjkxIn0.eyJhdWQiOiI1IiwianRpIjoiOTYyM2Y1YTk2MWYyZTg2OTBkYzE1OTE4ZjIyMDNiZDUxZGEzYmRhZGM3YzlkZmU2NGM5ZmNlYWM5YmFlM2IyYTVjMmRmYTcxNTQ4YWQyOTEiLCJpYXQiOjE1MjQwNDIzNzIsIm5iZiI6MTUyNDA0MjM3MiwiZXhwIjoxNTU1NTc4MzcyLCJzdWIiOiIxMDk0MSIsInNjb3BlcyI6W119.o8xJf63V14E9ZJa9U949-uDNigzRk36Hwjd0urVug2YAF_gdZsdWbbVHpxoUCfU4TWZtatvh8gatx6a2hnO9UbzslVpfOO6AiI9wj6YjDQOLw40Q6WB_dnnWTv1Cnc4vNkLwGY33xoMcCJ6-vOH7lUdsKrg-8dDyX-siscZ_Rb63ldw6t7a0USACG-IixfNM7m4--bGyhhv8SKfHVHCJrmCMv1H_fA1sT7USgTI66xCzR6go7wknQT6K6yd3VKdcAzizsfsCLrxgADQTamPhdAg53AqhAgcoP2FAncKC5jIdWEKYF7_d4vtMPKXALxAM2Ao5VTBX8ygbwhSQ4ztgDmv3ve4GrK-gVRkKmUd3zL1Pi__W-WR8kvGtp-PpvUWZEkhDGGxuj7-dmJKf6W5NIHS1P_kvHHV3UVW2aiIAvC12yvXMGNQng_LFffh-HW4Et5pQJOjM0zeHgo89htTTmRscohWZyzU1ywHLnJGbbtiRHhgsbd0tbjCODVH8jZPGCJMJ8-h7Vga-NOd1VI_f5GGz98QSGp92i6j9pBicIDojVfWRmbg9p38FRJHFHkvel2sEMcFwVEe_6cqDMgOnpGpam1_hLrLLbUkjkooHpy695v2D6H0GxO9WipDgeGXxxDGfVWFkiHXC57x3-ghn8gMUpRJqbX8A4g9ru8QcLRU";
         	$ch = curl_init();
         	$url = "https://www.pay2all.in/api/bus/v1/getRtcUpdatedFare";
 
@@ -481,7 +463,7 @@ class GetStation extends CI_Controller {
         		'etstnumber' =>  $etstnumber //'ETS784B1PT188010'  //
         	);
 
-        	$key =  "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijk2MjNmNWE5NjFmMmU4NjkwZGMxNTkxOGYyMjAzYmQ1MWRhM2JkYWRjN2M5ZGZlNjRjOWZjZWFjOWJhZTNiMmE1YzJkZmE3MTU0OGFkMjkxIn0.eyJhdWQiOiI1IiwianRpIjoiOTYyM2Y1YTk2MWYyZTg2OTBkYzE1OTE4ZjIyMDNiZDUxZGEzYmRhZGM3YzlkZmU2NGM5ZmNlYWM5YmFlM2IyYTVjMmRmYTcxNTQ4YWQyOTEiLCJpYXQiOjE1MjQwNDIzNzIsIm5iZiI6MTUyNDA0MjM3MiwiZXhwIjoxNTU1NTc4MzcyLCJzdWIiOiIxMDk0MSIsInNjb3BlcyI6W119.o8xJf63V14E9ZJa9U949-uDNigzRk36Hwjd0urVug2YAF_gdZsdWbbVHpxoUCfU4TWZtatvh8gatx6a2hnO9UbzslVpfOO6AiI9wj6YjDQOLw40Q6WB_dnnWTv1Cnc4vNkLwGY33xoMcCJ6-vOH7lUdsKrg-8dDyX-siscZ_Rb63ldw6t7a0USACG-IixfNM7m4--bGyhhv8SKfHVHCJrmCMv1H_fA1sT7USgTI66xCzR6go7wknQT6K6yd3VKdcAzizsfsCLrxgADQTamPhdAg53AqhAgcoP2FAncKC5jIdWEKYF7_d4vtMPKXALxAM2Ao5VTBX8ygbwhSQ4ztgDmv3ve4GrK-gVRkKmUd3zL1Pi__W-WR8kvGtp-PpvUWZEkhDGGxuj7-dmJKf6W5NIHS1P_kvHHV3UVW2aiIAvC12yvXMGNQng_LFffh-HW4Et5pQJOjM0zeHgo89htTTmRscohWZyzU1ywHLnJGbbtiRHhgsbd0tbjCODVH8jZPGCJMJ8-h7Vga-NOd1VI_f5GGz98QSGp92i6j9pBicIDojVfWRmbg9p38FRJHFHkvel2sEMcFwVEe_6cqDMgOnpGpam1_hLrLLbUkjkooHpy695v2D6H0GxO9WipDgeGXxxDGfVWFkiHXC57x3-ghn8gMUpRJqbX8A4g9ru8QcLRU";
+        	$key =  "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUziII6Ijk2MjNmNWE5NjFmMmU4NjkwZGMxNTkxOGYyMjAzYmQ1MWRhM2JkYWRjN2M5ZGZlNjRjOWZjZWFjOWJhZTNiMmE1YzJkZmE3MTU0OGFkMjkxIn0.eyJhdWQiOiI1IiwianRpIjoiOTYyM2Y1YTk2MWYyZTg2OTBkYzE1OTE4ZjIyMDNiZDUxZGEzYmRhZGM3YzlkZmU2NGM5ZmNlYWM5YmFlM2IyYTVjMmRmYTcxNTQ4YWQyOTEiLCJpYXQiOjE1MjQwNDIzNzIsIm5iZiI6MTUyNDA0MjM3MiwiZXhwIjoxNTU1NTc4MzcyLCJzdWIiOiIxMDk0MSIsInNjb3BlcyI6W119.o8xJf63V14E9ZJa9U949-uDNigzRk36Hwjd0urVug2YAF_gdZsdWbbVHpxoUCfU4TWZtatvh8gatx6a2hnO9UbzslVpfOO6AiI9wj6YjDQOLw40Q6WB_dnnWTv1Cnc4vNkLwGY33xoMcCJ6-vOH7lUdsKrg-8dDyX-siscZ_Rb63ldw6t7a0USACG-IixfNM7m4--bGyhhv8SKfHVHCJrmCMv1H_fA1sT7USgTI66xCzR6go7wknQT6K6yd3VKdcAzizsfsCLrxgADQTamPhdAg53AqhAgcoP2FAncKC5jIdWEKYF7_d4vtMPKXALxAM2Ao5VTBX8ygbwhSQ4ztgDmv3ve4GrK-gVRkKmUd3zL1Pi__W-WR8kvGtp-PpvUWZEkhDGGxuj7-dmJKf6W5NIHS1P_kvHHV3UVW2aiIAvC12yvXMGNQng_LFffh-HW4Et5pQJOjM0zeHgo89htTTmRscohWZyzU1ywHLnJGbbtiRHhgsbd0tbjCODVH8jZPGCJMJ8-h7Vga-NOd1VI_f5GGz98QSGp92i6j9pBicIDojVfWRmbg9p38FRJHFHkvel2sEMcFwVEe_6cqDMgOnpGpam1_hLrLLbUkjkooHpy695v2D6H0GxO9WipDgeGXxxDGfVWFkiHXC57x3-ghn8gMUpRJqbX8A4g9ru8QcLRU";
 
         	$ch = curl_init();
         	$url = "https://www.pay2all.in/api/bus/v1/getTicketByETSTNumber";
@@ -513,7 +495,7 @@ class GetStation extends CI_Controller {
         		'seatNbrsToCancel' => $_POST['']
         	);
 
-        	$key =  "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijk2MjNmNWE5NjFmMmU4NjkwZGMxNTkxOGYyMjAzYmQ1MWRhM2JkYWRjN2M5ZGZlNjRjOWZjZWFjOWJhZTNiMmE1YzJkZmE3MTU0OGFkMjkxIn0.eyJhdWQiOiI1IiwianRpIjoiOTYyM2Y1YTk2MWYyZTg2OTBkYzE1OTE4ZjIyMDNiZDUxZGEzYmRhZGM3YzlkZmU2NGM5ZmNlYWM5YmFlM2IyYTVjMmRmYTcxNTQ4YWQyOTEiLCJpYXQiOjE1MjQwNDIzNzIsIm5iZiI6MTUyNDA0MjM3MiwiZXhwIjoxNTU1NTc4MzcyLCJzdWIiOiIxMDk0MSIsInNjb3BlcyI6W119.o8xJf63V14E9ZJa9U949-uDNigzRk36Hwjd0urVug2YAF_gdZsdWbbVHpxoUCfU4TWZtatvh8gatx6a2hnO9UbzslVpfOO6AiI9wj6YjDQOLw40Q6WB_dnnWTv1Cnc4vNkLwGY33xoMcCJ6-vOH7lUdsKrg-8dDyX-siscZ_Rb63ldw6t7a0USACG-IixfNM7m4--bGyhhv8SKfHVHCJrmCMv1H_fA1sT7USgTI66xCzR6go7wknQT6K6yd3VKdcAzizsfsCLrxgADQTamPhdAg53AqhAgcoP2FAncKC5jIdWEKYF7_d4vtMPKXALxAM2Ao5VTBX8ygbwhSQ4ztgDmv3ve4GrK-gVRkKmUd3zL1Pi__W-WR8kvGtp-PpvUWZEkhDGGxuj7-dmJKf6W5NIHS1P_kvHHV3UVW2aiIAvC12yvXMGNQng_LFffh-HW4Et5pQJOjM0zeHgo89htTTmRscohWZyzU1ywHLnJGbbtiRHhgsbd0tbjCODVH8jZPGCJMJ8-h7Vga-NOd1VI_f5GGz98QSGp92i6j9pBicIDojVfWRmbg9p38FRJHFHkvel2sEMcFwVEe_6cqDMgOnpGpam1_hLrLLbUkjkooHpy695v2D6H0GxO9WipDgeGXxxDGfVWFkiHXC57x3-ghn8gMUpRJqbX8A4g9ru8QcLRU";
+        	$key =  "eyJ0eXAiOiJKV1QiLCJhbGcisImp0aSI6Ijk2MjNmNWE5NjFmMmU4NjkwZGMxNTkxOGYyMjAzYmQ1MWRhM2JkYWRjN2M5ZGZlNjRjOWZjZWFjOWJhZTNiMmE1YzJkZmE3MTU0OGFkMjkxIn0.eyJhdWQiOiI1IiwianRpIjoiOTYyM2Y1YTk2MWYyZTg2OTBkYzE1OTE4ZjIyMDNiZDUxZGEzYmRhZGM3YzlkZmU2NGM5ZmNlYWM5YmFlM2IyYTVjMmRmYTcxNTQ4YWQyOTEiLCJpYXQiOjE1MjQwNDIzNzIsIm5iZiI6MTUyNDA0MjM3MiwiZXhwIjoxNTU1NTc4MzcyLCJzdWIiOiIxMDk0MSIsInNjb3BlcyI6W119.o8xJf63V14E9ZJa9U949-uDNigzRk36Hwjd0urVug2YAF_gdZsdWbbVHpxoUCfU4TWZtatvh8gatx6a2hnO9UbzslVpfOO6AiI9wj6YjDQOLw40Q6WB_dnnWTv1Cnc4vNkLwGY33xoMcCJ6-vOH7lUdsKrg-8dDyX-siscZ_Rb63ldw6t7a0USACG-IixfNM7m4--bGyhhv8SKfHVHCJrmCMv1H_fA1sT7USgTI66xCzR6go7wknQT6K6yd3VKdcAzizsfsCLrxgADQTamPhdAg53AqhAgcoP2FAncKC5jIdWEKYF7_d4vtMPKXALxAM2Ao5VTBX8ygbwhSQ4ztgDmv3ve4GrK-gVRkKmUd3zL1Pi__W-WR8kvGtp-PpvUWZEkhDGGxuj7-dmJKf6W5NIHS1P_kvHHV3UVW2aiIAvC12yvXMGNQng_LFffh-HW4Et5pQJOjM0zeHgo89htTTmRscohWZyzU1ywHLnJGbbtiRHhgsbd0tbjCODVH8jZPGCJMJ8-h7Vga-NOd1VI_f5GGz98QSGp92i6j9pBicIDojVfWRmbg9p38FRJHFHkvel2sEMcFwVEe_6cqDMgOnpGpam1_hLrLLbUkjkooHpy695v2D6H0GxO9WipDgeGXxxDGfVWFkiHXC57x3-ghn8gMUpRJqbX8A4g9ru8QcLRU";
 
         	$ch = curl_init();
         	$url = "https://www.pay2all.in/api/bus/v1/cancelTicketConfirmation";
